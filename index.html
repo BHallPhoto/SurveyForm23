@@ -13,9 +13,9 @@
     <!-- Form Area -->
     <form action="post" id="survey-form">
         <!-- Personal Information -->
-        <input type="text" id="name">
-        <input type="email" id="email">
-        <input type="number" id="number">
+        <label for="name" id="name-label"><input name="name" type="text" id="name"></label>
+        <label for="email" id="email-label"><input name="email" type="email" id="email" required></label>
+        <label for="number" id="number-label"><input name="number" type="number" id="number" min="13" max="110"></label>
     </form>
 </body>
 </html>
