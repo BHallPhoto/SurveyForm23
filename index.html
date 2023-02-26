@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
     <script src="js/script.js"></script>
     <title>Document</title>
 </head>
@@ -14,62 +15,69 @@
     <!-- Form Area -->
     <form action="post" id="survey-form">
         <!-- Personal Information -->
-        <label for="name" id="name-label">
-            <input name="name" type="text" id="name" required placeholder="Name"/>
-        </label>
-        <label for="email" id="email-label">
-            <input name="email" type="email" id="email" required placeholder="Email"/>
-        </label>
-        <label for="number" id="number-label">
-            <input name="number" type="number" id="number" min="13" max="110" placeholder="Age"/>
-        </label>
-        <select id="dropdown">
-            <option value="">(select one)</option>
-            <option value="1">Our Newsletter</option>
-            <option value="2">Our Facebook Ad</option>
-            <option value="3">Our TikTok Ad</option>
-            <option value="4">Other</option>
-        </select>
+        <fieldset>
+            <div class="info">
+                <label for="name" id="name-label">
+                    <input name="name" type="text" id="name" required placeholder="Name"/>
+                </label>
+                <label for="email" id="email-label">
+                    <input name="email" type="email" id="email" required placeholder="Email"/>
+                </label>
+                <label for="number" id="number-label">
+                    <input name="number" type="number" id="number" min="13" max="110" placeholder="Age"/>
+                </label>
+            </div>    
+        </fieldset>
         <fieldset>
             <p>What type of Animal do you have?</p>
             <label for="cat">
-                <input type="radio" name="animal-type" id="cat" /> Cat
+                <input class="inline" type="radio" name="animal-type" id="cat" /> Cat
             </label>
             <label for="dog">
-                <input type="radio" name="animal-type" id="dog" /> Dog
+                <input class="inline" type="radio" name="animal-type" id="dog" /> Dog
             </label>
             <label for="both">
-                <input type="radio" name="animal-type" id="both" /> Both 
+                <input class="inline" type="radio" name="animal-type" id="both" /> Both 
             </label>
         </fieldset>
         <fieldset>
             <p>"What would you like to see more of on the Store?"<span class="clue"> (Check all that apply)</span></p>
             <label for="toys">
-                <input name="prefer" value="more-toys" type="checkbox" id="toys" class="input-checkbox" />
+                <input class="inline" name="prefer" value="more-toys" type="checkbox" id="toys" class="input-checkbox" />
                 More Toys
             </label>
             <label for="collars">
-                <input name="prefer" value="more-collars" type="checkbox" id="collars" class="input-checkbox" />
+                <input class="inline" name="prefer" value="more-collars" type="checkbox" id="collars" class="input-checkbox" />
                 More Collars
             </label>
             <label for="furniture">
-                <input name="prefer" value="furniture" type="checkbox" id="furniture" class="input-checkbox" />
+                <input class="inline" name="prefer" value="furniture" type="checkbox" id="furniture" class="input-checkbox" />
                 Pet Furniture
             </label>
             <label for="bath">
-                <input name="prefer" value="bath-products" type="checkbox" id="bath" class="input-checkbox" />
+                <input class="inline" name="prefer" value="bath-products" type="checkbox" id="bath" class="input-checkbox" />
                 Bath Products
             </label>
             <label for="clothing">
-                <input name="prefer" value="clothing" type="checkbox" id="clothing" class="input-checkbox" />
+                <input class="inline" name="prefer" value="clothing" type="checkbox" id="clothing" class="input-checkbox" />
                 Clothing Products
             </label>
             <label for="tracking">
-                <input name="prefer" value="tracking" type="checkbox" id="tracking" class="input-checkbox" />
+                <input class="inline" name="prefer" value="tracking" type="checkbox" id="tracking" class="input-checkbox" />
                 Tracking Devices
             </label>
         </fieldset>
         <fieldset>
+            <label for="dropdown">
+                How did you Hear about our new Store?
+                <select id="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">Our Newsletter</option>
+                    <option value="2">Our Facebook Ad</option>
+                    <option value="3">Our TikTok Ad</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
             <label for="comments">
                 Any comments or suggestions are appreciated:
                 <textarea name="comments" id="comments" cols="30" rows="5"></textarea>
